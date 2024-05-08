@@ -67,7 +67,17 @@ def check_win(this):
         return True
     elif check_sum(diag=1, who=this) == 3:
         return True
-    return False
+    else:
+        tie = True
+        for x_row in player_grid:
+            for val in x_row:
+                if val == 0:
+                    tie = False
+        if tie:
+            print("Game ended in a tie.")
+            exit()
+
+        return tie
 
 
 def get_rand_empty():
