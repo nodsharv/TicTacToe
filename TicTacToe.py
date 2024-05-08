@@ -75,6 +75,7 @@ def check_win(this):
                     tie = False
         if tie:
             print("Game ended in a tie.")
+            input("Press any key to exit.")
             exit()
         return tie
 
@@ -166,10 +167,12 @@ while True:
     print_grid()
     if check_win(1):
         print("You won!")
+        input("Press any key to exit.")
         break
     input("Press enter for the AI to make it's move")
     ai_move()
     print_grid()
     if check_win(2):
         print("You lost.")
+        input("Press any key to exit.")
         break
