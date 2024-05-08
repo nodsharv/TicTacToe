@@ -76,7 +76,6 @@ def check_win(this):
         if tie:
             print("Game ended in a tie.")
             exit()
-
         return tie
 
 
